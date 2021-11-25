@@ -1,0 +1,101 @@
+:root {
+  --primary: #661B62;
+  --accent: #C1A3C0;
+  --gray: #ced6d5;
+}
+
+*, *::before, *::after {
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: inherit;
+}
+
+ .container {
+	 margin-top: 5rem;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 flex-direction: column;
+}
+
+ .progress__container {
+	 width: 55rem;
+	 max-width: 100%;
+	 position: relative;
+	 margin-bottom: 4.5rem;
+	 display: flex;
+	 justify-content: space-between;
+}
+
+ .progress__container::before {
+	 content: "";
+	 width: 100%;
+	 height: 0.2rem;
+	 background-color: var(--gray);
+	 position: absolute;
+	 top: 50%;
+	 left: 0;
+	 transform: translateY(-50%);
+	 z-index: -1;
+}
+
+ .progress__bar {
+	 width: 0%;
+	 height: 0.3rem;
+	 background-color: var(--accent);
+	 position: absolute;
+	 top: 50%;
+	 left: 0;
+	 transform: translateY(-50%);
+	 z-index: -1;
+	 transition: 0.4s ease;
+}
+ .progress__circle {
+	 width: 7rem;
+	 height: 7rem;
+	 color: #2f2e41;
+	 background-color: var(--gray);
+	 border: 0.2rem solid var(--gray);
+	 border-radius: 50%;
+	 font-size: 4.5rem;
+	 display: flex;
+	 justify-content: center;
+	 transition: 0.4s ease;
+}
+
+.progress__container {
+  margin: 20px;
+}
+
+.progress__circle.active {
+    color: var(--accent);
+    border: 0.2rem solid var(--accent);
+    background-color: var(--primary);
+    box-shadow: var(--primary) 0px 0px 0px 10px, var(--accent) 0px 0px 10px 12px;
+}
+
+ .progress__btn {
+	 width: 15rem;
+	 color: #333;
+	 background-color: var(--primary);
+	 color: white;
+	 border: 0;
+	 border-radius: 0.5rem;
+	 text-transform: uppercase;
+	 padding: 1rem;
+	 transition: all 0.3s ease;
+}
+ .progress__btn:hover {
+	 cursor: pointer;
+	 background-color: var(--accent);
+	 color: var(--primary);
+}
+ .progress__btn:disabled {
+	 cursor: not-allowed;
+	 background-color: #e0e0e0;
+	 color: black;
+}
+
+.progress__wrapper {
+  margin-top: 20px;
+}
