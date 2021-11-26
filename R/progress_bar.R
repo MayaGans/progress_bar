@@ -1,14 +1,14 @@
-progress_bar <- function(args) {
+stepper <- function(args) {
   
   deps <- htmltools::htmlDependency(
-    name = "progress_bar",
+    name = "stepper",
     version = "1.0",
     src = "inst",
-    script = "js/progress_bar.js",
-    stylesheet = "css/progress_bar.css"
+    script = "js/stepper.js",
+    stylesheet = "css/stepper.css"
   )
   
- progress_html <- div(class="container",
+  stepper_html <- div(class="container",
     div(class="progress__container",
     div(class="progress__bar js-bar"),
     div(class="progress__circle js-circle active", `data-index`=.1, 1),
@@ -23,6 +23,6 @@ progress_bar <- function(args) {
     )
  )
  
-  tagList(progress_html, deps)
+  tagList(stepper_html, deps)
 
 }
