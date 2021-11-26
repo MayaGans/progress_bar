@@ -2,7 +2,15 @@ library(shiny)
 
 
 ui <- fluidPage(
-    progress_bar(3, c("Text1", "Text2", "Text3"))
+    progress_bar(
+        list("Text1", 
+             "Text2", 
+             "Text3", 
+             "Text 4",
+             "Text 5",
+             "Text 6"
+             )
+    )
 )
 
 

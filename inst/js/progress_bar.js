@@ -1,12 +1,10 @@
 $( document ).ready(function() {
-const prev = document.querySelector(".js-prev");
+    const prev = document.querySelector(".js-prev");
 const next = document.querySelector(".js-next");
 const progressBar = document.querySelector(".js-bar");
 const circles = document.querySelectorAll(".js-circle");
 
 let currentActive = 1;
-// initially set to 1
-console.log(currentActive)
 
 const update = function () {
   circles.forEach((circle, i) => {
@@ -47,7 +45,6 @@ displayOn("progress_body_text", currentActive);
 
 next.addEventListener("click", () => {
   currentActive++;
-  console.log(currentActive)
   currentActive > circles.length && (currentActive = circles.length);
   
   toggle("progress_body_text", 'none');
@@ -58,13 +55,11 @@ next.addEventListener("click", () => {
 
 prev.addEventListener("click", () => {
   currentActive--;
-  console.log(currentActive)
   currentActive < 1 && (currentActive = 1);
   
   toggle("progress_body_text", 'none');
-   displayOn("progress_body_text", currentActive)
+  displayOn("progress_body_text", currentActive)
   
   update();
 });
-
 });

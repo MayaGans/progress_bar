@@ -19,8 +19,7 @@
 }
 
  .progress__container {
-	 width: 55rem;
-	 max-width: 100%;
+	 width: 100%;
 	 position: relative;
 	 margin-bottom: 4.5rem;
 	 display: flex;
@@ -51,16 +50,16 @@
 	 transition: 0.4s ease;
 }
  .progress__circle {
-	 width: 7rem;
-	 height: 7rem;
-	 color: #2f2e41;
-	 background-color: var(--gray);
-	 border: 0.2rem solid var(--gray);
-	 border-radius: 50%;
-	 font-size: 4.5rem;
-	 display: flex;
-	 justify-content: center;
-	 transition: 0.4s ease;
+    width: 3.5rem;
+    height: 3.5rem;
+    color: #2f2e41;
+    background-color: var(--gray);
+    border: 0.2rem solid var(--gray);
+    border-radius: 50%;
+    font-size: 2.25rem;
+    display: flex;
+    justify-content: center;
+    transition: 0.4s ease;
 }
 
 .progress__container {
